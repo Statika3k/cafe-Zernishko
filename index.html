@@ -44,9 +44,9 @@
                 подарить вам вкус и уют, из-за которых захочется возвращаться снова и снова.</p>
             <a href="#menu" class="top-info__btn">Посмотреть меню</a>
         </div>
-        <img src="/image/Cofe.png" class="coffee-img" alt="Кофе">
-        <img src="/image/Cookie.png" class="cookie-img" alt="Печенье">
-        <img src="/image/Sinabone.png" class="sinabon-img" alt="Синабон">
+        <img src="image/Cofe.png" class="coffee-img" alt="Кофе">
+        <img src="image/Cookie.png" class="cookie-img" alt="Печенье">
+        <img src="image/Sinabone.png" class="sinabon-img" alt="Синабон">
     </section>
 
     <section class="about center" id="about">
@@ -493,15 +493,33 @@
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script>
         ymaps.ready(function () {
-            var map = new ymaps.Map("yandexMap", {
+            const map = new ymaps.Map("yandexMap", {
                 center: [59.9386, 30.3122],
-                zoom: 14
+                zoom: window.innerWidth <= 767 ? 13 : 14
             });
-            var placemark = new ymaps.Placemark([59.9386, 30.3122], {
+
+            const placemark = new ymaps.Placemark([59.9386, 30.3122], {
                 hintContent: 'Кофейня по адресу СПб, Коржекова, 5',
                 balloonContent: 'Кофейня по адресу СПб, Коржекова, 5'
             });
+
             map.geoObjects.add(placemark);
+
+            // Оптимизация для мобильных устройств
+            if (window.innerWidth <= 767) {
+                map.behaviors.disable('scrollZoom');
+            }
+
+            window.addEventListener('resize', () => {
+                const newZoom = window.innerWidth <= 767 ? 13 : 14;
+                map.setZoom(newZoom);
+
+                if (window.innerWidth <= 767) {
+                    map.behaviors.disable('scrollZoom');
+                } else {
+                    map.behaviors.enable('scrollZoom');
+                }
+            });
         });
     </script>
 

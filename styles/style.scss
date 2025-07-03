@@ -56,6 +56,10 @@ h2 {
 
     &__nav {
         margin-left: auto;
+
+        &-mobile {
+            display: none;
+        }
       
         & a {
             font-size: 16px;
@@ -577,3 +581,5 @@ h2 {
         gap: 14px;
     }
 }
+
+@import "mobile";

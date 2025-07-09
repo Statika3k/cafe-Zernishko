@@ -1,9 +1,9 @@
 @media (max-width: 767px) {
     h2 {
-        font-size: 36px;
-        line-height: 44px;
-        padding-top: 36px;
-        padding-bottom: 24px;
+        font-size: 28px;
+        line-height: 34px;
+        padding-top: 30px;
+        padding-bottom: 20px;
     }
 
     .center {
@@ -63,12 +63,14 @@
             display: flex;
             font-size: 14px;
             line-height: 20px;
+            margin-bottom: 86px;
         }
     }
 
     .coffee-img,
     .cookie-img,
-    .sinabon-img {
+    .sinabon-img,
+    .zerna-img {
         display: none;
     }
 
@@ -293,8 +295,13 @@
         padding: 32px 16px;
         gap: 24px;
 
-        &__logo img {
-            width: 160px;
+        &__logo {
+            padding-top: 0;
+            padding-bottom: 0;
+
+            & img {
+                width: 160px;
+            }
         }
 
         &__logo-text {
@@ -321,5 +328,15 @@
                 height: 32px;
             }
         }
+    }
+}
+
+@media (max-width: 414px) {
+    .header__nav-mobile {
+        gap: 12px;
+    }
+
+    .top-info__btn {
+        padding: 15px 70px;
     }
 }

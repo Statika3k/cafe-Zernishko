@@ -46,8 +46,11 @@ h2 {
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
+    justify-content: space-between;
+    padding: 31.5px calc(50% - 600px);
     width: 100%;
-    z-index: 1000;
+    z-index: 10;
     height: 120px;
 
     &__logo {
@@ -104,9 +107,9 @@ h2 {
 .top-content {
     height: auto;
     padding-top: 120px;
-    background-image: url(/image/tray.png);
+    background-image: url('../image/tray.png');
     background-repeat: no-repeat;
-    background-position: calc(100% + 490px) 68px;
+    background-position: calc(100% + 432px) 70px;
     position: relative;
     z-index: 1;
 
@@ -119,16 +122,14 @@ h2 {
         height: 890px;
         z-index: 2;
         pointer-events: none;
-        background-image: url(/image/Zerna.png);
-        background-repeat: no-repeat;
-        background-position: calc(100% - 43px) 177px;
         transition: all 0.5s ease;
     }
 }
 
 .top-content .coffee-img,
 .top-content .cookie-img,
-.top-content .sinabon-img {
+.top-content .sinabon-img,
+.top-content .zerna-img {
     position: absolute;
     z-index: 3;
     pointer-events: none;
@@ -138,18 +139,23 @@ h2 {
 }
 
 .top-content .coffee-img {
-    right: 186px;
-    top: 86px;
+    right: 368px;
+    top: 204px;
 }
 
 .top-content .cookie-img {
-    right: 326px;
-    top: 486px;
+    right: 449px;
+    top: 563px;
 }
 
 .top-content .sinabon-img {
-    right: -117px;
-    top: 318px;
+    right: 57px;
+    top: 445px;
+}
+
+.top-content .zerna-img {
+    right: 158px;
+    top: 220px;
 }
 
 /* Анимация при наведении */
@@ -382,6 +388,12 @@ h2 {
         &__author {
             display: flex;
             gap: 20px;
+
+            &-img {
+                width: 63px;
+                height: 63px;
+                border-radius: 60px;
+            }
         }
 
         &__name {

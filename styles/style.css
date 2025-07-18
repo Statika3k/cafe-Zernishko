@@ -203,6 +203,9 @@ h2 {
   color: rgb(246, 245, 244);
   background-color: rgb(162, 101, 57);
 }
+.top-info__image_tablet {
+  display: none;
+}
 
 .about {
   padding-bottom: 64px;
@@ -525,6 +528,255 @@ h2 {
   gap: 14px;
 }
 
+@media (max-width: 1230px) {
+  .center {
+    padding-left: calc(50% - 480px);
+    padding-right: calc(50% - 480px);
+  }
+  h2 {
+    font-size: 40px;
+    line-height: 48px;
+    padding-top: 52px;
+    padding-bottom: 24px;
+  }
+  .header {
+    padding: 25px calc(50% - 480px);
+    height: 100px;
+  }
+  .header__menu {
+    gap: 32px;
+  }
+  .header-btn {
+    padding: 14px 28px;
+    margin-left: 32px;
+  }
+  .top-content {
+    background-image: url("../image/tray_tablet.png");
+    background-repeat: no-repeat;
+    background-position: calc(100% + 360px) 90px;
+  }
+  .top-info__title {
+    font-size: 43px;
+    line-height: 53px;
+  }
+  .top-info__name {
+    font-size: 21px;
+    line-height: 26px;
+    max-width: 329px;
+    margin-top: 17px;
+  }
+  .top-info__desc {
+    font-size: 14px;
+    line-height: 18px;
+    max-width: 390px;
+    margin-top: 19px;
+  }
+  .top-info__btn {
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 36px;
+    margin-bottom: 120px;
+  }
+  .top-info__image {
+    display: none;
+  }
+  .top-info__image_tablet {
+    display: block;
+  }
+  .about-card__content {
+    padding: 18px;
+  }
+  .about-card__subtitle {
+    font-size: 20px;
+    line-height: 22px;
+    padding-bottom: 12px;
+  }
+  .about-card__text {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .about-card__image {
+    transition: none;
+    transform: none;
+  }
+  .about-card:hover .about-card__image {
+    transform: none;
+  }
+  .menu-items {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 66px;
+  }
+  .menu__filter-button {
+    padding: 12px 36px;
+  }
+  .menu-item:hover .menu-item__image {
+    transform: none;
+  }
+  .contacts__container {
+    gap: 24px;
+  }
+  .contacts__subtitle {
+    font-size: 21px;
+    line-height: 26px;
+    padding-bottom: 18px;
+  }
+  .contacts__map {
+    width: 100%;
+    height: 486px;
+  }
+  .contacts__content {
+    gap: 12px;
+  }
+  .contacts__icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+  .contacts__text {
+    font-size: 18px;
+  }
+  .contacts__info,
+  .contacts__form {
+    padding: 18px;
+  }
+  .booking-form__title {
+    font-size: 21px;
+    line-height: 26px;
+    padding-bottom: 18px;
+  }
+  .booking-form__input {
+    padding: 12px 40px 14px 20px;
+  }
+  .booking-form__button {
+    padding: 14px 40px;
+  }
+}
+@media (max-width: 1024px) {
+  .center {
+    padding-left: calc(50% - 400px);
+    padding-right: calc(50% - 400px);
+  }
+  .header {
+    padding: 20px calc(50% - 400px);
+    height: 90px;
+  }
+  .header__menu {
+    gap: 24px;
+  }
+  .header__nav a {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+  .header-btn {
+    padding: 12px 24px;
+    margin-left: 24px;
+    font-size: 14px;
+  }
+  .header__logo img {
+    max-height: 40px;
+  }
+  .top-content {
+    background-position: calc(100% + 390px) 90px;
+  }
+  .top-info__title {
+    max-width: 467px;
+    font-size: 40px;
+    line-height: 51px;
+  }
+  .about-container {
+    grid-template-columns: repeat(8, 1fr);
+    gap: 20px;
+  }
+  .about-card {
+    grid-column: span 4;
+    flex-direction: column;
+    border-radius: 16px 16px 16px 0;
+  }
+  .about-card__image-wrapper {
+    border-radius: 16px 16px 0 0;
+  }
+  .about-card__content {
+    padding: 12px;
+  }
+  .about-card__subtitle {
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+  .about-card__text {
+    max-width: 100%;
+    font-size: 13px;
+  }
+  .contacts__container {
+    grid-template-columns: 1fr;
+  }
+  .contacts__map {
+    height: 400px;
+    order: -1;
+  }
+  .contacts__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .contacts__subtitle {
+    font-size: 20px;
+    line-height: 24px;
+    padding-bottom: 40px;
+  }
+  .menu-items {
+    gap: 20px;
+  }
+  .menu__nav {
+    gap: 20px;
+  }
+  .menu-item__info {
+    padding: 16px;
+  }
+  .menu-item__price {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .reviews__list {
+    gap: 20px;
+  }
+  .reviews-card__author {
+    gap: 16px;
+  }
+  .reviews-card__name {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .reviews-card__text {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .booking-form__title {
+    font-size: 20px;
+    line-height: 24px;
+    padding-bottom: 16px;
+  }
+  .confirmation-message {
+    padding-top: 80px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 970px) {
+  h2 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .top-content {
+    background-position: calc(100% + 443px) 90px;
+  }
+}
+@media (max-width: 870px) {
+  .top-content {
+    background-position: calc(100% + 489px) 130px;
+  }
+  .reviews__list {
+    gap: 12px;
+  }
+}
 @media (max-width: 767px) {
   h2 {
     font-size: 28px;

@@ -218,6 +218,10 @@ h2 {
             background-color: $brown;
         }
     }
+
+    &__image_tablet {
+        display: none;
+    }
 }
 
 .about {
@@ -594,4 +598,5 @@ h2 {
     }
 }
 
+@import "tablet";
 @import "mobile";
